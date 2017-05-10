@@ -98,6 +98,7 @@ While the `Debug Memory Graph` shows the `Book` increasing from `1` to `6` when 
   - For `Book` - `PFPlaceHolderSingleton`
   - For `Book_Book_` - `PFAllocateObject`
 
+- Sometimes people report differences between Intruments and Xcode that turn out to be because Xcode Run action uses Debug configuration, whereas Instruments uses Release configuration. I tried with both being Debug or both being Release, and the results were the same as described above.
 
 ##### Footnote on known bad practices in the sample code
 Since this is just a sample project, it does some things in a way not appropriate for production code: for example keeping core data stack in AppDelegate, forced optional unwrapping and forced `try` statements without `catch` logic.
